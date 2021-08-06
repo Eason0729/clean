@@ -1,0 +1,8 @@
+.del-a.alert{
+    padding: 0;
+    margin-bottom: 0;
+}
+div.del-a>li>div>div>.close{
+    position: relative;
+    padding: 0;
+}

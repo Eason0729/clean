@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>請填寫志願</title>
+    <!--bootstrap-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- update the version number as needed -->
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"
+    ></script>
+    <!-- include only the Firebase features as you need -->
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"
+    ></script>
+    <!-- <script defer src="https://www.gstatic.com/firebasejs//firebase/8.2.4/firebase-messaging.js"></script> -->
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.2.4/firebase-storage.js"
+    ></script>
+    <link href="co.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light position-sticky fixed-top">
+      <a class="navbar-brand" href="#">清掃志願</a>
+    </nav>
+    <div class="container-fluid">
+      <!-- <button type="button" class="btn btn-outline-primary">新增志願</button> -->
+      <form onsubmit="return add_new();">
+        <div class="form-group">
+          <label for="formControlRange">程度</label>
+          <input
+            type="range"
+            class="form-control-range"
+            id="formControlRange"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">工作</label>
+          <select
+            multiple
+            class="form-control ma-add-set"
+            id="exampleFormControlSelect2"
+          >
+            <option>loading</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">新增志願</button>
+      </form>
+    </div>
+    <hr />
+    <div class="result container-fluid">
+      <h4>結果</h4>
+      <ul class="list-group list-group-flush ma-input-result">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-6">項目</div>
+            <div class="col-2">優先度</div>
+            <div class="col-2">代碼</div>
+            <div class="col-2">動作</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="result container-fluid">
+      <hr />
+      <button type="button" class="btn btn-outline-primary d-none final">
+        儲存
+      </button>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">完成</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            你已儲存志願
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            <button type="button" class="btn btn-primary" onclick="firebase.auth().signOut();window.location.href='index.html';">登出</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var fire;
+      var prevent_status = false;
+      var basic_data;
+      document.addEventListener("DOMContentLoaded", function () {
+        var firebaseConfig = {
+          apiKey: "AIzaSyD_TrHUvPGxgAa8AWDFhAuf4lWighv_s98",
+          authDomain: "volunteer-451.firebaseapp.com",
+          databaseURL: "https://volunteer-451-default-rtdb.firebaseio.com",
+          projectId: "volunteer-451",
+          storageBucket: "volunteer-451.appspot.com",
+          messagingSenderId: "238946116685",
+          appId: "1:238946116685:web:90ca82524d4ed97bcc2804",
+        };
+        // Initialize Firebase
+        fire = firebase.initializeApp(firebaseConfig);
+        firebase.auth().onAuthStateChanged(function (user) {
+          if (user) {
+            // User is signed in.
+            console.log("user logged in!");
+            console.log(firebase.auth().currentUser);
+            sec_init();
+          } else {
+            // No user is signed in.
+            if (!prevent_status) {
+              // GoogleLogin();
+            }
+          }
+        });
+        function sec_init() {
+          document
+            .querySelector(`.final`)
+            .addEventListener("click", function () {
+              console.log("submitting!");
+              // firebase
+              //   .database()
+              //   .ref(`/note/${key}/view`)
+              //   .once("value")
+              //   .then(function (snapshot) {
+              //     firebase
+              //       .database()
+              //       .ref(`/note/${key}/view`)
+              //       .set(parseInt(snapshot.val() + 1));
+              //   });
+              var process_data = [];
+              document
+                .querySelectorAll(".ma-input-result>div.alert")
+                .forEach(function (x) {
+                  process_data.push({
+                    priority: x.getAttribute("data-priority"),
+                    name: x.getAttribute("data-name"),
+                    code: x.getAttribute("data-val"),
+                  });
+                });
+
+              process_data.sort(function (a, b) {
+                if (a.priority > b.priority) return 1;
+                else return -1;
+              });
+              process_data = {
+                user_uid: firebase.auth().currentUser.uid,
+                email_start: firebase.auth().currentUser.email.split("@")[0],
+                data: process_data,
+              };
+              console.log(process_data);
+              firebase
+                .database()
+                .ref(
+                  `final/${
+                    firebase
+                      .auth()
+                      .currentUser.email.split("@")[0]
+                      .split("91xc")
+                      .pop() || "test_set"
+                  }`
+                )
+                .set(process_data).then(function(){
+                  $('#exampleModal').modal('show');
+                });
+            });
+          firebase
+            .database()
+            .ref(
+              `final/${
+                firebase
+                  .auth()
+                  .currentUser.email.split("@")[0]
+                  .split("91xc")
+                  .pop() || "test_set"
+              }`
+            )
+            .once("value")
+            .then(function (snapshot) {
+              var value = snapshot.val();
+              console.log(value);
+              (value.data||[]).forEach(function (x) {
+                document.querySelector(`.final`).classList.remove("d-none");
+                document.querySelector(
+                  ".ma-input-result"
+                ).innerHTML += `            
+              <div class="alert alert-light alert-dismissible fade show del-a" role="alert" 
+                data-val="${x.code}" 
+                data-name="${x.name}" 
+                data-priority="${x.priority}">
+                <li class="list-group-item">
+                <div class="row">
+                  <div class="col-6">
+                    ${x.name}
+                  </div>
+                  <div class="col-2">${x.priority}</div>
+                  <div class="col-2">${x.code}</div>
+                  <div class="col-2">             
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                </li>
+              </div>
+              `;
+              });
+            });
+          return new Promise(function (resolve, reject) {
+            resolve_ = resolve;
+            xhr = new XMLHttpRequest();
+            xhr.open("get", `res/set.json`);
+            xhr.onreadystatechange = function (res) {
+              if (this.readyState == 4 && this.status == 200) {
+                basic_data = JSON.parse(xhr.responseText);
+                //document.querySelector("#AudioPlayer > source").src=root_path+ basic_data.path.audio;
+                resolve();
+              }
+            };
+            xhr.send();
+          }).then(function () {
+            //ma-add-set
+            document.querySelector("select.ma-add-set").innerHTML = ``;
+            basic_data.data.forEach((x) => {
+              document.querySelector(
+                "select.ma-add-set"
+              ).innerHTML += `<option data-val="${x.code}" data-name="${x.name}">${x.name}</option>`;
+            });
+          });
+        }
+      });
+      function add_new() {
+        console.log("adding!");
+        document.querySelector(`.final`).classList.remove("d-none");
+        var priority = +document.querySelector("input[type=range]").value;
+        document.querySelectorAll("select.ma-add-set>option").forEach((x) => {
+          if (x.selected) {
+            // console.log(x);
+            console.log(
+              `ans:(${x.getAttribute("data-val")},${x.getAttribute(
+                "data-name"
+              )},${priority})`
+            );
+            //ma-input-result
+
+            document.querySelector(
+              ".ma-input-result"
+            ).innerHTML += `            
+              <div class="alert alert-light alert-dismissible fade show del-a" role="alert" 
+                data-val="${x.getAttribute("data-val")}" 
+                data-name="${x.getAttribute("data-name")}" 
+                data-priority="${priority}">
+                <li class="list-group-item">
+                <div class="row">
+                  <div class="col-6">
+                    ${x.getAttribute("data-name")}
+                  </div>
+                  <div class="col-2">${priority}</div>
+                  <div class="col-2">${x.getAttribute("data-val")}</div>
+                  <div class="col-2">             
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                </li>
+              </div>
+              `;
+          }
+        });
+        return false;
+      }
+      function GoogleLogin() {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        provider.setCustomParameters({
+          Login_hint: "google",
+          prompt: "select_account",
+          hd:"mingdao.edu.tw"
+        });
+        prevent_status = true;
+        return new Promise(function (resolve, reject) {
+          firebase
+            .auth()
+            .signInWithRedirect(/*signInWithPopup*/ provider)
+            .then(function (result) {
+              var token = result.credential.accessToken;
+              var user = result.user;
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

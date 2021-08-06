@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>對不起我很懶</title>
+
+    <!-- update the version number as needed -->
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"
+    ></script>
+    <!-- include only the Firebase features as you need -->
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"
+    ></script>
+    <!-- <script defer src="https://www.gstatic.com/firebasejs//firebase/8.2.4/firebase-messaging.js"></script> -->
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.2.4/firebase-storage.js"
+    ></script>
+
+    <style media="screen">
+      body {
+        background: #eceff1;
+        color: rgba(0, 0, 0, 0.87);
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #message {
+        background: white;
+        max-width: 360px;
+        margin: 100px auto 16px;
+        padding: 32px 24px;
+        border-radius: 3px;
+      }
+      #message h2 {
+        color: #ffa100;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 0 8px;
+      }
+      #message h1 {
+        font-size: 22px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 0 0 16px;
+      }
+      #message p {
+        line-height: 140%;
+        margin: 16px 0 24px;
+        font-size: 14px;
+      }
+      #message a {
+        display: block;
+        text-align: center;
+        background: #039be5;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        padding: 16px;
+        border-radius: 4px;
+      }
+      #message,
+      #message a {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+      #load {
+        color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-size: 13px;
+      }
+      @media (max-width: 600px) {
+        body,
+        #message {
+          margin-top: 0;
+          background: white;
+          box-shadow: none;
+        }
+        body {
+          border-top: 16px solid #ffa100;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>歡迎</h2>
+      <h1>請登入</h1>
+      <p>
+        因為我很相信同學(<del>絕對不是因為我懶著搞資安</del>)，請用學號為<code>91xc__@ms.mingdao.edu.tw</code>的G
+        suite帳號登入
+      </p>
+      <a href="javascript:next_page()" id="logbtn">載入中</a>
+    </div>
+    <!-- <p id="load">Firebase SDK Loading&hellip;</p> -->
+
+    <script>
+      var fire;
+      var prevent_status = false;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // try {
+        //   let app = firebase.app();
+        //   let features = ["auth", "database", "messaging", "storage"].filter(
+        //     (feature) => typeof app[feature] === "function"
+        //   );
+        //   document.getElementById(
+        //     "load"
+        //   ).innerHTML = `Firebase SDK loaded with ${features.join(", ")}`;
+        // } catch (e) {
+        //   console.error(e);
+        //   document.getElementById("load").innerHTML =
+        //     "Error loading the Firebase SDK, check the console.";
+        // }
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyD_TrHUvPGxgAa8AWDFhAuf4lWighv_s98",
+          authDomain: "volunteer-451.firebaseapp.com",
+          databaseURL: "https://volunteer-451-default-rtdb.firebaseio.com",
+          projectId: "volunteer-451",
+          storageBucket: "volunteer-451.appspot.com",
+          messagingSenderId: "238946116685",
+          appId: "1:238946116685:web:90ca82524d4ed97bcc2804",
+        };
+        // Initialize Firebase
+        fire = firebase.initializeApp(firebaseConfig);
+        firebase.auth().onAuthStateChanged(function (user) {
+          if (user) {
+            // User is signed in.
+            document.querySelector('#logbtn').innerHTML="進入";
+            console.log("user logged in!");
+            console.log(firebase.auth().currentUser);
+            sec_init();
+          } else {
+            // No user is signed in.
+            document.querySelector('#logbtn').innerHTML="登入";
+            if (!prevent_status) {
+              // GoogleLogin();
+            }
+          }
+        });
+        function sec_init() {}
+      });
+      function GoogleLogin() {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        provider.setCustomParameters({
+          Login_hint: "google",
+          prompt: "select_account",
+          hd:"mingdao.edu.tw"
+        });
+        prevent_status = true;
+        return new Promise(function (resolve, reject) {
+          firebase
+            .auth()
+            .signInWithRedirect(/*signInWithPopup*/ provider)
+            .then(function (result) {
+              var token = result.credential.accessToken;
+              var user = result.user;
+            });
+        });
+      }
+      function next_page() {
+        if (firebase.auth().currentUser) window.location.href = "co.html";
+        else GoogleLogin();
+      }
+    </script>
+  </body>
+</html>

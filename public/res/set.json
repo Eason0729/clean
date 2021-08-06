@@ -1,0 +1,26 @@
+{
+  "data": [
+    { "name": "走廊地板", "require": 3, "code": "A1" },
+    { "name": "走廊外壁", "require": 1, "code": "A2" },
+    { "name": "講桌 飲水機 書櫃", "require": 1, "code": "A3" },
+    { "name": "黑板 電腦機櫃", "require": 1, "code": "A4" },
+    { "name": "布告欄", "require": 1, "code": "A5" },
+    { "name": "排桌椅", "require": 1, "code": "A6" },
+    { "name": "刷馬桶", "require": 4, "code": "B1" },
+    { "name": "廁間內地板", "require": 2, "code": "B2" },
+    { "name": "收垃圾(廁所)", "require": 1, "code": "B3" },
+    { "name": "女兒牆", "require": 1, "code": "B4" },
+    { "name": "洗手台(廁所)", "require": 2, "code": "B5" },
+    { "name": "廁所地板(含前走廊)", "require": 1, "code": "B6" },
+    { "name": "教室掃地", "require": 4, "code": "C1" },
+    { "name": "教室拖地", "require": 4, "code": "C2" },
+    { "name": "教室門", "require": 1, "code": "C3" },
+    { "name": "窗戶", "require": 4, "code": "C4" },
+    { "name": "回收", "require": 6, "code": "D1" },
+    { "name": "課後清掃", "require": 2, "code": "Z1" }
+  ],
+  "sum": {
+    "rest": 5,
+    "total": 37
+  }
+}

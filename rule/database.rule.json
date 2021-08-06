@@ -1,0 +1,6 @@
+{
+  "rules": {
+    ".read": "auth.token.email.matches(/91xc[0-9]+@[a-z.]+(mingdao.edu.tw)$/)",
+    ".write": "auth.token.email.matches(/91xc[0-9]+@[a-z.]+(mingdao.edu.tw)$/)"
+  }
+}
