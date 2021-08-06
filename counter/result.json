@@ -1,0 +1,691 @@
+{
+  "final" : {
+    "01" : {
+      "data" : [ {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "100"
+      }, {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "64"
+      }, {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "69"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "76"
+      }, {
+        "code" : "D1",
+        "name" : "回收",
+        "priority" : "87"
+      }, {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "94"
+      } ],
+      "email_start" : "91xc01",
+      "user_uid" : "wVnBeIxQs5QK14wMuTIrAi70R1G2"
+    },
+    "03" : {
+      "data" : [ {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "55"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "55"
+      }, {
+        "code" : "B4",
+        "name" : "女兒牆",
+        "priority" : "55"
+      }, {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "55"
+      }, {
+        "code" : "A2",
+        "name" : "走廊外壁",
+        "priority" : "55"
+      } ],
+      "email_start" : "91xc03",
+      "user_uid" : "aFZuPBIj0OdZVEQhyvXw4esy4K82"
+    },
+    "04" : {
+      "data" : [ {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "100"
+      }, {
+        "code" : "A1",
+        "name" : "走廊地板",
+        "priority" : "67"
+      }, {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "79"
+      }, {
+        "code" : "A6",
+        "name" : "排桌椅",
+        "priority" : "86"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "89"
+      } ],
+      "email_start" : "91xc04",
+      "user_uid" : "EwRotfPHO3RCi4vbAkExuDEB7a23"
+    },
+    "06" : {
+      "data" : [ {
+        "code" : "B3",
+        "name" : "收垃圾(廁所)",
+        "priority" : "0"
+      }, {
+        "code" : "D1",
+        "name" : "回收",
+        "priority" : "0"
+      }, {
+        "code" : "A4",
+        "name" : "黑板 電腦機櫃",
+        "priority" : "36"
+      }, {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "36"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "6"
+      }, {
+        "code" : "B2",
+        "name" : "廁間內地板",
+        "priority" : "6"
+      }, {
+        "code" : "B1",
+        "name" : "刷馬桶",
+        "priority" : "6"
+      }, {
+        "code" : "A2",
+        "name" : "走廊外壁",
+        "priority" : "6"
+      }, {
+        "code" : "A1",
+        "name" : "走廊地板",
+        "priority" : "6"
+      }, {
+        "code" : "B1",
+        "name" : "刷馬桶",
+        "priority" : "6"
+      }, {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "8"
+      }, {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "8"
+      }, {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "89"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "89"
+      }, {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "89"
+      } ],
+      "email_start" : "91xc06",
+      "user_uid" : "vc9kUwU7rifBwGgkug07URT2YIc2"
+    },
+    "07" : {
+      "data" : [ {
+        "code" : "A2",
+        "name" : "走廊外壁",
+        "priority" : "81"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "82"
+      }, {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "83"
+      }, {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "84"
+      }, {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "85"
+      }, {
+        "code" : "Z1",
+        "name" : "課後清掃",
+        "priority" : "86"
+      } ],
+      "email_start" : "91xc07",
+      "user_uid" : "UjMaeTNZHVU8A7wbIkwvM6YJVvJ3"
+    },
+    "08" : {
+      "data" : [ {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "100"
+      }, {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "96"
+      }, {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "97"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "98"
+      }, {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "99"
+      } ],
+      "email_start" : "91xc08",
+      "user_uid" : "9oBtguY0yPWVMNsO0vsb0h8NFby1"
+    },
+    "10" : {
+      "data" : [ {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "100"
+      }, {
+        "code" : "B5",
+        "name" : "洗手台(廁所)",
+        "priority" : "88"
+      }, {
+        "code" : "A4",
+        "name" : "黑板 電腦機櫃",
+        "priority" : "88"
+      }, {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "91"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "91"
+      } ],
+      "email_start" : "91xc10",
+      "user_uid" : "3oWilsGh7wSH6C8Eymc7KbfhrGL2"
+    },
+    "15" : {
+      "data" : [ {
+        "code" : "B1",
+        "name" : "刷馬桶",
+        "priority" : "50"
+      }, {
+        "code" : "B5",
+        "name" : "洗手台(廁所)",
+        "priority" : "50"
+      }, {
+        "code" : "B2",
+        "name" : "廁間內地板",
+        "priority" : "50"
+      }, {
+        "code" : "D1",
+        "name" : "回收",
+        "priority" : "50"
+      }, {
+        "code" : "B3",
+        "name" : "收垃圾(廁所)",
+        "priority" : "50"
+      } ],
+      "email_start" : "91xc15",
+      "user_uid" : "jnlZERaWxsNJmc1jL0xz6pYjI602"
+    },
+    "16" : {
+      "data" : [ {
+        "code" : "B4",
+        "name" : "女兒牆",
+        "priority" : "50"
+      }, {
+        "code" : "B2",
+        "name" : "廁間內地板",
+        "priority" : "50"
+      }, {
+        "code" : "B5",
+        "name" : "洗手台(廁所)",
+        "priority" : "50"
+      }, {
+        "code" : "D1",
+        "name" : "回收",
+        "priority" : "50"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "50"
+      }, {
+        "code" : "B1",
+        "name" : "刷馬桶",
+        "priority" : "50"
+      } ],
+      "email_start" : "91xc16",
+      "user_uid" : "5UStHA8T6tM36ciNXufZXPKazgu2"
+    },
+    "17" : {
+      "data" : [ {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "0"
+      }, {
+        "code" : "D1",
+        "name" : "回收",
+        "priority" : "100"
+      }, {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "12"
+      }, {
+        "code" : "B4",
+        "name" : "女兒牆",
+        "priority" : "22"
+      }, {
+        "code" : "B3",
+        "name" : "收垃圾(廁所)",
+        "priority" : "99"
+      } ],
+      "email_start" : "91xc17",
+      "user_uid" : "nTdLgGsrpbV5lT90Rg4OKv1DfJC3"
+    },
+    "21" : {
+      "data" : [ {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "100"
+      }, {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "100"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "77"
+      }, {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "98"
+      }, {
+        "code" : "B4",
+        "name" : "女兒牆",
+        "priority" : "99"
+      } ],
+      "email_start" : "91xc21",
+      "user_uid" : "ShMoY458bbeKvmT3clFG6W4xoUi1"
+    },
+    "24" : {
+      "email_start" : "91xc24",
+      "user_uid" : "TIk8XjWTxchtNWJGJZNy8h0kN623"
+    },
+    "25" : {
+      "data" : [ {
+        "code" : "B4",
+        "name" : "女兒牆",
+        "priority" : "100"
+      }, {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "50"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "50"
+      }, {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "50"
+      }, {
+        "code" : "D1",
+        "name" : "回收",
+        "priority" : "85"
+      } ],
+      "email_start" : "91xc25",
+      "user_uid" : "zIa2Q0cIiVYMRIjEHgS73ysyXQL2"
+    },
+    "26" : {
+      "data" : [ {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "50"
+      }, {
+        "code" : "B5",
+        "name" : "洗手台(廁所)",
+        "priority" : "50"
+      }, {
+        "code" : "B3",
+        "name" : "收垃圾(廁所)",
+        "priority" : "50"
+      }, {
+        "code" : "B2",
+        "name" : "廁間內地板",
+        "priority" : "50"
+      }, {
+        "code" : "B1",
+        "name" : "刷馬桶",
+        "priority" : "50"
+      } ],
+      "email_start" : "91xc26",
+      "user_uid" : "C2swh01lAlTNZ2LN6sgphUgCw522"
+    },
+    "27" : {
+      "data" : [ {
+        "code" : "A2",
+        "name" : "走廊外壁",
+        "priority" : "100"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "95"
+      }, {
+        "code" : "A6",
+        "name" : "排桌椅",
+        "priority" : "96"
+      }, {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "97"
+      }, {
+        "code" : "B4",
+        "name" : "女兒牆",
+        "priority" : "98"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "99"
+      } ],
+      "email_start" : "91xc27",
+      "user_uid" : "FawEDxkvgfZVwOx8c5E0PEZNsXo2"
+    },
+    "30" : {
+      "data" : [ {
+        "code" : "A1",
+        "name" : "走廊地板",
+        "priority" : "100"
+      }, {
+        "code" : "B4",
+        "name" : "女兒牆",
+        "priority" : "100"
+      } ],
+      "email_start" : "91xc30",
+      "user_uid" : "SoYOJimRjIYzDsGRyExtby6blur1"
+    },
+    "32" : {
+      "data" : [ {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "100"
+      }, {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "73"
+      }, {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "74"
+      }, {
+        "code" : "B5",
+        "name" : "洗手台(廁所)",
+        "priority" : "76"
+      }, {
+        "code" : "A1",
+        "name" : "走廊地板",
+        "priority" : "80"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "90"
+      }, {
+        "code" : "A6",
+        "name" : "排桌椅",
+        "priority" : "93"
+      } ],
+      "email_start" : "91xc32",
+      "user_uid" : "1G3yIMHKJCdzVKgQUfagvpbDSwp1"
+    },
+    "33" : {
+      "data" : [ {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "100"
+      }, {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "100"
+      }, {
+        "code" : "A6",
+        "name" : "排桌椅",
+        "priority" : "70"
+      }, {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "83"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "92"
+      } ],
+      "email_start" : "91xc33",
+      "user_uid" : "7vOsFHFsf0h7qOIRVkv7MkIF3Fj1"
+    },
+    "35" : {
+      "data" : [ {
+        "code" : "B3",
+        "name" : "收垃圾(廁所)",
+        "priority" : "12"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "14"
+      }, {
+        "code" : "B5",
+        "name" : "洗手台(廁所)",
+        "priority" : "15"
+      }, {
+        "code" : "B1",
+        "name" : "刷馬桶",
+        "priority" : "15"
+      }, {
+        "code" : "B2",
+        "name" : "廁間內地板",
+        "priority" : "16"
+      }, {
+        "code" : "A6",
+        "name" : "排桌椅",
+        "priority" : "17"
+      }, {
+        "code" : "A1",
+        "name" : "走廊地板",
+        "priority" : "30"
+      }, {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "33"
+      }, {
+        "code" : "A2",
+        "name" : "走廊外壁",
+        "priority" : "36"
+      }, {
+        "code" : "D1",
+        "name" : "回收",
+        "priority" : "4"
+      }, {
+        "code" : "A4",
+        "name" : "黑板 電腦機櫃",
+        "priority" : "43"
+      }, {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "48"
+      }, {
+        "code" : "B4",
+        "name" : "女兒牆",
+        "priority" : "50"
+      }, {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "7"
+      }, {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "7"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "74"
+      }, {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "80"
+      } ],
+      "email_start" : "91xc35",
+      "user_uid" : "GubjG96HOoY6repFGTSecPCn1DB2"
+    },
+    "36" : {
+      "data" : [ {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "100"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "20"
+      }, {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "40"
+      }, {
+        "code" : "A6",
+        "name" : "排桌椅",
+        "priority" : "60"
+      }, {
+        "code" : "C2",
+        "name" : "教室拖地",
+        "priority" : "80"
+      } ],
+      "email_start" : "91xc36",
+      "user_uid" : "4m7cf5VcsKMa39B331jmlIbbfSm1"
+    },
+    "37" : {
+      "data" : [ {
+        "code" : "B1",
+        "name" : "刷馬桶",
+        "priority" : "100"
+      }, {
+        "code" : "D1",
+        "name" : "回收",
+        "priority" : "62"
+      }, {
+        "code" : "A6",
+        "name" : "排桌椅",
+        "priority" : "71"
+      }, {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "76"
+      }, {
+        "code" : "B4",
+        "name" : "女兒牆",
+        "priority" : "80"
+      }, {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "88"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "95"
+      } ],
+      "email_start" : "91xc37",
+      "user_uid" : "jKXMwW2ODjSHQaVAgfNxrAB8nVr2"
+    },
+    "38" : {
+      "data" : [ {
+        "code" : "A3",
+        "name" : "講桌 飲水機 書櫃",
+        "priority" : "100"
+      }, {
+        "code" : "B6",
+        "name" : "廁所地板(含前走廊)",
+        "priority" : "31"
+      }, {
+        "code" : "C1",
+        "name" : "教室掃地",
+        "priority" : "77"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "90"
+      }, {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "99"
+      } ],
+      "email_start" : "91xc38",
+      "user_uid" : "3jfRPhKU6aVYb0iUDz9kBlNYh2l2"
+    },
+    "39" : {
+      "data" : [ {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "50"
+      }, {
+        "code" : "A6",
+        "name" : "排桌椅",
+        "priority" : "55"
+      }, {
+        "code" : "A5",
+        "name" : "布告欄",
+        "priority" : "56"
+      }, {
+        "code" : "A1",
+        "name" : "走廊地板",
+        "priority" : "58"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "61"
+      } ],
+      "email_start" : "91xc39",
+      "user_uid" : "gHXmXZ94IjZmiZ9eIiJN3Krt3fn2"
+    },
+    "42" : {
+      "data" : [ {
+        "code" : "C4",
+        "name" : "窗戶",
+        "priority" : "100"
+      }, {
+        "code" : "D1",
+        "name" : "回收",
+        "priority" : "91"
+      }, {
+        "code" : "A1",
+        "name" : "走廊地板",
+        "priority" : "94"
+      }, {
+        "code" : "A6",
+        "name" : "排桌椅",
+        "priority" : "95"
+      }, {
+        "code" : "C3",
+        "name" : "教室門",
+        "priority" : "96"
+      } ],
+      "email_start" : "91xc42",
+      "user_uid" : "Wlf6E5XVSqQuslmvffkpTsDWoso1"
+    }
+  }
+}
