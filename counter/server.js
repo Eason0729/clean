@@ -2,7 +2,7 @@ var fs = require("fs");
 var set=require('./set.json')
 var result=require('./result.json')
 var output={};
-var config={loop_max:500,skip:[1,2]};
+var config={depth:500,skip:[1,2]};
 
 //extend prototype
 Array.prototype.top=function(){
@@ -37,14 +37,14 @@ console.log(temp.length)
 console.log(result.sort((a,b)=>a.identity-b.identity))
 //skip
 config.skip.forEach((x)=>{result[x-1].joined=true;})
+//create table to translate code into chinese name (name)
+var translate={};
+set.data.forEach((x)=>translate[x.code]=x.name);
 //pre process set
 set=set.data.map((x)=>{
     var name=x.name,amount=+x.require,code=x.code;
     return {name,amount,code};
 })
-
-//stage result
-// console.log(result);
 
 var force_pass=false;
 //false is ended
@@ -58,7 +58,7 @@ function check(){
 var loop=0;
 while(check()){
     loop++;
-    if(loop==config.loop_max)force_pass=true
+    if(loop==config.depth)force_pass=true
     var set=set.map(job => {
         if(job.amount==0){
             for(var i=1;i<=42;i++)
@@ -99,7 +99,7 @@ set.forEach(job => {
 var virtual_stream='';
 
 for(var prop in output){
-    virtual_stream+=`${prop},${output[prop].join(',')}\n`;
+    virtual_stream+=`${translate[prop]},${output[prop].join(',')}\n`;
 }
 
 fs.writeFile('result.csv', virtual_stream, 'utf8',function (err) {

@@ -203,7 +203,7 @@
             )
             .once("value")
             .then(function (snapshot) {
-              var value = snapshot.val();
+              var value = snapshot.val()||{note:"empty-1547"};
               console.log(value);
               (value.data||[]).forEach(function (x) {
                 document.querySelector(`.final`).classList.remove("d-none");
