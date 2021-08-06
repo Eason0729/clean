@@ -9,7 +9,9 @@ Array.prototype.top=function(){
     return this[this.length-1];
 }
 Array.prototype.shuffle =function(){
-    return this.sort(() => Math.random() - 0.5);
+    var temp=[];
+    this.forEach((x)=>temp.push({x,n:Math.random()}))
+    return temp.sort((a,b)=>a.n-b.n).map(x=>x.x);
 }
 
 //pre process people
